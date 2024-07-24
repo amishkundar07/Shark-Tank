@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="container-centered">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <CEnter><button type="submit">Login</button></CEnter>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showRegistrationPanel()">Register</a></p>
+        </div>
+
+        
+        <div class="register-container" >
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+                <CEnter><button type="submit">Register</button></CEnter>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLoginPanel()">Login</a></p>
+        </div>
+    </div>
+    <script>
+        function showRegistrationPanel() {
+            document.querySelector(".login-container").style.display = "none";
+            document.querySelector(".register-container").style.display = "block";
+        }
+
+        function showLoginPanel() {
+            document.querySelector(".register-container").style.display = "none";
+            document.querySelector(".login-container").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
